@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JSON File Decryptor</title>
+    <script src="./crypto-js.min.js"></script>
+    <script src="./ksHead5.js"></script>
+    <script src="./ksRandomNum.js"></script>
+    <script src="./decrypt.js"></script>
 </head>
 <body>
-    <p>hello</p>
+    <input type="file" id="fileInput" multiple>
+    <button onclick="decryptFiles()">解密</button>
+    <div id="output"></div>
 </body>
 </html>
