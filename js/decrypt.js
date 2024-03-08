@@ -95,7 +95,7 @@ function decryptFiles() {
                     var jsonContent = JSON.parse(event.target.result);
                     var passwd = jsonContent.password;
                     var decryptedContent = decrypt(passwd);
-                    outputDiv.innerHTML += "<p>文件名: " + file.name + ",主机 " + jsonContent.host + ",端口 " + jsonContent.port + ",备注 " + jsonContent.name +", 密码: " + decryptedContent + "</p>";
+                    outputDiv.innerHTML += "<p>{\"主机\":\"" + jsonContent.host + "\", \"端口\":\"" + jsonContent.port+ "\", \"备注\":\"" + jsonContent.name +"\", \"用户名\":\"" + jsonContent.user_name +"\", \"密码\":\"" + decryptedContent + "}" + "</p>";
                 } catch (error) {
                     console.error("Error parsing JSON from file: " + file.name);
                 }
